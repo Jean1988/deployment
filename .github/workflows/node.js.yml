@@ -31,14 +31,14 @@ jobs:
 
      ## deploy 步骤  
     - name: Deploy
-      uses: easingthemes/ssh-deploy@v4.0.0
+      uses: easingthemes/ssh-deploy@v4.1.8
       env:
         ## REMOTE_HOST: ${{ secrets.SERVER_HOST }}
         ## REMOTE_USER: ${{ secrets.SERVER_USERNAME }}
         ## 秘钥
         SSH_PRIVATE_KEY: ${{ secrets.ALIYUN }}
         ## 这个参数是必须的
-        ARGS: "-rltgoDzv0 --delete"
+        ARGS: "-rltgoDzvO --delete"
         SOURCE: "dist/"
         REMOTE_HOST: "47.103.196.224"
         REMOTE_USER: "root"
